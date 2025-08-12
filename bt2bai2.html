@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    const soMet = Number(prompt("Nhập mét:"));
+    if (Number.isFinite(soMet)) {
+        const soFeet = soMet * 3.2808;
+        alert(`${soMet} m = ${soFeet.toFixed(4)} ft`);
+    } else {
+        alert("Vui lòng nhập số hợp lệ.");
+    }
+</script>
+</body>
+</html>

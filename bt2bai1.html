@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    const doC = Number(prompt("Nhap do C:"));
+    if (!Number.isFinite(doC)) {
+        document.write("Vui long nhap so hop le.");
+    } else {
+        const doF = doC * 9 / 5 + 32;
+        document.write(`${doC}°C = ${doF.toFixed(2)}°F`);
+    }
+</script>
+</body>
+</html>
