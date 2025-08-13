@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let canh = +prompt("Nhap do dai canh a:");
+    if (Number.isFinite(canh) && canh >= 0) {
+        let dienTich = canh * canh; // S = a^2
+        alert(`Dien tich hinh vuong: ${dienTich}`);
+    } else {
+        alert("Vui long nhap so hop le (>= 0).");
+    }
+</script>
+</body>
+</html>

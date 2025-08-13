@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thue</title>
+</head>
+<body>
+<h1>Tính thuế tncn / tháng (triệu đồng): </h1>
+<input id="thu-nhap" type="number" min="0" step="0.01">
+<button id="tinh">Tính thuế</button>
+<div id="ket-qua"></div>
+<script>
+    document.getElementById("tinh").onclick = function () {
+        let thuNhap = parseFloat(document.getElementById("thu-nhap").value);
+        let ketQua = document.getElementById("ket-qua");
+        if (!(thuNhap >= 0)) { ketQua.textContent = "Vui lòng nhập số hợp lệ."; return; }
+        let thue = 0;
+        if (thuNhap <= 5) thue = thuNhap * 5 / 100;
+        else if (thuNhap <= 10) thue = 5*5/100 + (thuNhap-5)*10/100;
+        else if (thuNhap <= 18) thue = 5*5/100 + 5*10/100 + (thuNhap-10)*15/100;
+        else if (thuNhap <= 32) thue = 5*5/100 + 5*10/100 + 8*15/100 + (thuNhap-18)*20/100;
+        else if (thuNhap <= 52) thue = 5*5/100 + 5*10/100 + 8*15/100 + 14*20/100 + (thuNhap-32)*25/100;
+        else if (thuNhap <= 80) thue = 5*5/100 + 5*10/100 + 8*15/100 + 14*20/100 + 20*25/100 + (thuNhap-52)*30/100;
+        else thue = 5*5/100 + 5*10/100 + 8*15/100 + 14*20/100 + 20*25/100 + 28*30/100 + (thuNhap-80)*35/100;
+        let thueVND = (thue * 1_000_000).toLocaleString("vi-VN") + " đ";
+        ketQua.textContent = `Thuế phải nộp:${thueVND}`;
+    };
+</script>
+</body>
+</html>

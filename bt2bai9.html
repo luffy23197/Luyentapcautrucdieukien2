@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let tienGoc = +prompt("Tien goc (VND):");
+    let soThang = +prompt("So thang:");
+    let laiThang = +prompt("Lai suat thang (%):");
+    let tong = tienGoc * Math.pow(1 + laiThang/100, soThang);
+    let lai  = tong - tienGoc;
+    alert("Tien lai: " + lai.toLocaleString("vi-VN") + " đ\nTong: " + tong.toLocaleString("vi-VN") + " đ");
+</body>
+</html>

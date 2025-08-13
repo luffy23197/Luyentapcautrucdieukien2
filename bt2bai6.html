@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap he so a:");
+    let b = +prompt("Nhap he so b:");
+    if (!Number.isFinite(a) || !Number.isFinite(b)) {
+        alert("Vui long nhap so hop le.");
+    } else if (a === 0) {
+        if (b === 0) {
+            alert("Phuong trinh vo so nghiem.");
+        } else {
+            alert("Phuong trinh vo nghiem.");
+        }
+    } else {
+        let x = -b / a;
+        alert(`Nghiem x = ${x}`);
+    }
+</script>
+</body>
+</html>

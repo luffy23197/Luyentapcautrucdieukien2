@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap he so a:");
+    let b = +prompt("Nhap he so b:");
+    let c = +prompt("Nhap he so c:");
+    if (!Number.isFinite(a) || !Number.isFinite(b) || !Number.isFinite(c)) {
+        alert("Vui long nhap so hop le.");
+    } else if (a === 0) {
+        if (b === 0) {
+            if (c === 0) alert("Phuong trinh co vo so nghiem.");
+            else alert("Phuong trinh vo nghiem.");
+        } else {
+            let x = -c / b;
+            alert("Phuong trinh bac 1, nghiem x = " + x);
+        }
+    } else {
+        let delta = b*b - 4*a*c;
+        if (delta < 0) {
+            alert("Phuong trinh vo nghiem (khong co nghiem thuc).");
+        } else if (delta === 0) {
+            let x = -b / (2*a);
+            alert("Phuong trinh co nghiem kep x1 = x2 = " + x);
+        } else {
+            let canDelta = Math.sqrt(delta);
+            let x1 = (-b + canDelta) / (2*a);
+            let x2 = (-b - canDelta) / (2*a);
+            alert("Phuong trinh co 2 nghiem phan biet:\n"
+                + "x1 = " + x1 + "\n"
+                + "x2 = " + x2);
+        }
+    }
+</script>
+</body>
+</html>

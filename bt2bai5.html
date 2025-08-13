@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap do dai canh ke a:");
+    let b = +prompt("Nhap do dai canh ke b:");
+    if (Number.isFinite(a) && Number.isFinite(b) && a >= 0 && b >= 0) {
+        let dienTich = (a * b) / 2;
+        alert(`Dien tich tam giac vuong: ${dienTich}`);
+    } else {
+        alert("Vui long nhap so hop le (>= 0).");
+    }
+</script>
+</body>
+</html>
